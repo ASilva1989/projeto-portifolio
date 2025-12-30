@@ -101,3 +101,37 @@ div#social a {
 div#social a:hover {
   color: var(--destaque-inverso);
 }
+
+section#detalhes {
+  grid-column: 2;
+}
+
+article {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+article h2 {
+  color: var(--destaque);
+  margin-bottom: 20px;
+}
+
+/* Container para vídeos: mantém proporção 16:9 e centraliza */
+.video-container {
+  position: relative;   /* permite posicionar elementos internos absolutamente */
+  width: 100%;          /* ocupa toda a largura disponível */
+  margin: auto;         /* centraliza horizontalmente */
+  aspect-ratio: 16/9;   /* mantém proporção widescreen */
+}
+
+/* Estiliza o iframe dentro do container de vídeo */
+.video-container iframe {
+  position: absolute;  /* posiciona o vídeo de forma absoluta dentro do container */
+  top: 0;              /* alinha ao topo */
+  left: 0;             /* alinha à esquerda */
+  width: 100%;         /* ocupa toda a largura do container */
+  height: 100%;        /* ocupa toda a altura do container */
+  border-radius: 8px;  /* arredonda os cantos do vídeo */
+}
