@@ -1,9 +1,11 @@
-
 * {
-  margin: 0; /* Remove margens padrão */
-  padding: 0; /* Remove preenchimentos padrão */
-  box-sizing: border-box; /* Inclui borda e padding no tamanho total */
-}  
+  margin: 0;
+  /* Remove margens padrão */
+  padding: 0;
+  /* Remove preenchimentos padrão */
+  box-sizing: border-box;
+  /* Inclui borda e padding no tamanho total */
+}
 
 :root {
   --fundo-principal: #f5f5f5;
@@ -15,10 +17,14 @@
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Define a fonte principal do texto */
-  line-height: 1.5em; /* Define a altura da linha para melhor legibilidade */
-  background-color: var(--fundo-principal); /* Define a cor de fundo do corpo da página */
-  color: var(--texto); /* Define a cor do texto */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Define a fonte principal do texto */
+  line-height: 1.5em;
+  /* Define a altura da linha para melhor legibilidade */
+  background-color: var(--fundo-principal);
+  /* Define a cor de fundo do corpo da página */
+  color: var(--texto);
+  /* Define a cor do texto */
 }
 
 header {
@@ -65,23 +71,33 @@ section#ficha {
 }
 
 section#ficha img.foto {
-  width: 200px;                         /* largura da imagem */
-  aspect-ratio: 1/1;                    /* mantém proporção quadrada */
-  object-fit: cover;                    /* corta o excesso para preencher */
-  overflow: hidden;                     /* esconde o que ultrapassa os limites */
-  border-radius: 50%;                   /* deixa a imagem circular */
-  border: 5px solid var(--fundo-card);  /* borda interna branca */
-  outline: 5px solid var(--destaque);   /* contorno azul ao redor */
-  display: block;                       /* centraliza como bloco */
-  margin: auto;                         /* centraliza horizontalmente */
-  margin-bottom: 15px;                  /* espaço abaixo da imagem */
+  width: 200px;
+  /* largura da imagem */
+  aspect-ratio: 1/1;
+  /* mantém proporção quadrada */
+  object-fit: cover;
+  /* corta o excesso para preencher */
+  overflow: hidden;
+  /* esconde o que ultrapassa os limites */
+  border-radius: 50%;
+  /* deixa a imagem circular */
+  border: 5px solid var(--fundo-card);
+  /* borda interna branca */
+  outline: 5px solid var(--destaque);
+  /* contorno azul ao redor */
+  display: block;
+  /* centraliza como bloco */
+  margin: auto;
+  /* centraliza horizontalmente */
+  margin-bottom: 15px;
+  /* espaço abaixo da imagem */
 }
 
 section#ficha h1 {
   color: var(--destaque);
   margin: 15px 0;
   font-size: 1.5rem;
-  text-align: left;  
+  text-align: left;
 }
 
 div#social {
@@ -120,20 +136,30 @@ article h2 {
 
 /* Container para vídeos: mantém proporção 16:9 e centraliza */
 .video-container {
-  position: relative;   /* permite posicionar elementos internos absolutamente */
-  width: 100%;          /* ocupa toda a largura disponível */
-  margin: auto;         /* centraliza horizontalmente */
-  aspect-ratio: 16/9;   /* mantém proporção widescreen */
+  position: relative;
+  /* permite posicionar elementos internos absolutamente */
+  width: 100%;
+  /* ocupa toda a largura disponível */
+  margin: auto;
+  /* centraliza horizontalmente */
+  aspect-ratio: 16/9;
+  /* mantém proporção widescreen */
 }
 
 /* Estiliza o iframe dentro do container de vídeo */
 .video-container iframe {
-  position: absolute;  /* posiciona o vídeo de forma absoluta dentro do container */
-  top: 0;              /* alinha ao topo */
-  left: 0;             /* alinha à esquerda */
-  width: 100%;         /* ocupa toda a largura do container */
-  height: 100%;        /* ocupa toda a altura do container */
-  border-radius: 8px;  /* arredonda os cantos do vídeo */
+  position: absolute;
+  /* posiciona o vídeo de forma absoluta dentro do container */
+  top: 0;
+  /* alinha ao topo */
+  left: 0;
+  /* alinha à esquerda */
+  width: 100%;
+  /* ocupa toda a largura do container */
+  height: 100%;
+  /* ocupa toda a altura do container */
+  border-radius: 8px;
+  /* arredonda os cantos do vídeo */
 }
 
 #skill-container {
@@ -202,8 +228,61 @@ article h2 {
   font-size: 1.1em;
 }
 
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-color 0.3s, border-width 0.3s;
+}
+
+#projeto-container .projeto:hover {
+  border-color: var(--destaque);
+  border-left-width: 15px;
+  cursor: pointer;
+}
+
+#projeto-container .foto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: var(--destaque);
+  color: var(--texto-inverso);
+  padding: 10px;
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   #skill-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  #projeto-container .projeto {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  #projeto-container .projeto-info {
+    max-width: 80%;
+  }
+
+  #projeto-container .foto {
+    aspect-ratio: 1/1;
+    max-width: 20%;
+    max-height: 200px;
   }
 }
