@@ -49,3 +49,55 @@ nav#menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
 }
+
+main {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+section#ficha {
+  background-color: var(--fundo-card);
+  padding: 20px;
+  border-radius: 5px;
+  grid-column: 2;
+}
+
+section#ficha img.foto {
+  width: 200px;                         /* largura da imagem */
+  aspect-ratio: 1/1;                    /* mantém proporção quadrada */
+  object-fit: cover;                    /* corta o excesso para preencher */
+  overflow: hidden;                     /* esconde o que ultrapassa os limites */
+  border-radius: 50%;                   /* deixa a imagem circular */
+  border: 5px solid var(--fundo-card);  /* borda interna branca */
+  outline: 5px solid var(--destaque);   /* contorno azul ao redor */
+  display: block;                       /* centraliza como bloco */
+  margin: auto;                         /* centraliza horizontalmente */
+  margin-bottom: 15px;                  /* espaço abaixo da imagem */
+}
+
+section#ficha h1 {
+  color: var(--destaque);
+  margin: 15px 0;
+  font-size: 1.5rem;
+  text-align: left;  
+}
+
+div#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  gap: 1em;
+  margin-top: 15px;
+}
+
+div#social a {
+  color: var(--destaque);
+  transition: color 0.3s;
+}
+
+div#social a:hover {
+  color: var(--destaque-inverso);
+}
